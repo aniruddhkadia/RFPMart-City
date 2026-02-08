@@ -1,11 +1,16 @@
 {
   "functions": {
-    "*.php": {
+    "src-php/**/*.php": {
       "runtime": "vercel-php@0.7.2"
     }
   },
   "routes": [
-    { "src": "/", "dest": "/index.php" },
-    { "src": "/(.*)", "dest": "/$1" }
+    { "src": "/(.*\\.php)", "dest": "/src-php/$1" },
+    { "src": "/", "dest": "/src-php/index.php" },
+    { "src": "/uswds/(.*)", "dest": "/src-php/uswds/$1" },
+    { "src": "/images/(.*)", "dest": "/src-php/images/$1" },
+    { "src": "/css/(.*)", "dest": "/src-php/css/$1" },
+    { "src": "/js/(.*)", "dest": "/src-php/js/$1" },
+    { "src": "/(.*)", "dest": "/src-php/$1" }
   ]
 }
