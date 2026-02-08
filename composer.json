@@ -7,11 +7,10 @@
   "authors": [
     {
       "name": "Ashish Adeshara",
-      "organization": "RFPMart LLC"
+      "role": "Maintainer"
     }
   ],
   "require": {
-    "php": "^8.2",
-    "rfpmart/uswds-1": "^1.0"
+    "php": "^8.2"
   }
 }
